@@ -93,12 +93,7 @@ fun putMessage(qmgr: MQQueueManager, queueName: String, msg: String){
 }
 
 fun main(){
-  // try {
     val qmgr = mqConnect()
     putMessage(qmgr, System.getenv("MQC_QUEUE_NAME") ?: "testq1",  "Hello World!")
-  // }
-  // catch(e:Exception) {
-  //   println("Exception: ${e}")
-  // }
 }
 
